@@ -2,7 +2,7 @@
 
 ## DESARROLLADO POR: Mauricio Gomez
 
-Este proyecto es una solución de agendamiento de turnos para que los clientes de varios comercios puedan reservar con anticipación un espacio de atención en un servicio específico que presta cada comercio.
+Este proyecto es una solución de agendamiento de turnos para que los clientes de varios comercios puedan reservar con anticipación un espacio de atención en un servicio específico que presta cada comercio. Es un API desarrollada en NestJS para asignar turnos de un servicio de forma automatica, ingresando fecha inicio y fecha fin.
 
 ## INSTALACIÓN BASE DE DATOS
 
