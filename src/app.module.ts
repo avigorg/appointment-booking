@@ -2,9 +2,18 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TurnosModule } from './modules/turnos/turnos.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
+
+import { MSSQL_CONFIG } from './common/constants/constants';
+
 
 @Module({
-  imports: [TurnosModule],
+  imports: [
+    TypeOrmModule.forRoot({
+      ...MSSQL_CONFIG,
+    }),
+    TurnosModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

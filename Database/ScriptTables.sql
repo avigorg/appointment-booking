@@ -102,3 +102,13 @@ DECLARE @fechaInicio DATE = '2023-03-15'
 DECLARE @fechaFin DATE = '2023-03-20'
 
 EXEC generarTurnos @fechaInicio, @fechaFin, @idServicio
+
+-- Scripts para crear el usuario que utiliza la aplicacion
+
+CREATE LOGIN root WITH PASSWORD = 'Fer315*874guA';
+CREATE USER booking_root FOR LOGIN admin;
+
+USE booking;
+GO
+EXEC sp_addrolemember 'db_datareader', 'booking_root';
+EXEC sp_addrolemember 'db_datawriter', 'booking_root';
