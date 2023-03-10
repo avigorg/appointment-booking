@@ -1,9 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { TurnosController } from './turnos.controller';
 import { TurnosService } from './turnos.service';
-import { TurnosDto } from './turnos.dto';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Turno } from '../../entities/turno.entity';
+import { Repository } from 'typeorm';
+
 describe('TurnosController', () => {
     let controller: TurnosController;
     let service: TurnosService;
@@ -40,3 +41,6 @@ describe('TurnosController', () => {
       });
     });
   });
+
+
+

@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TurnosModule } from './modules/turnos/turnos.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { SwaggerModule } from '@nestjs/swagger';
 
 import { MSSQL_CONFIG } from './common/constants/constants';
 
@@ -13,6 +14,7 @@ import { MSSQL_CONFIG } from './common/constants/constants';
       ...MSSQL_CONFIG,
     }),
     TurnosModule,
+    SwaggerModule,
   ],
   controllers: [AppController],
   providers: [AppService],
